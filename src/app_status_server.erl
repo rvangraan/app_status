@@ -104,12 +104,12 @@ fold(InitAcc, Fun) when is_function(Fun, 2) ->
 %%
 
 -record(state, {
-    status :: ets:tab(), %% name() -> {internal_status(), [name()]}
-    exps   :: ets:tab(), %% name() -> [name()]
-    exps_r :: ets:tab(), %% name() -> [name()]
-    waits  :: ets:tab(), %% name() -> [{ref, From}]
-    waits_r:: ets:tab(), %% {name(), ref()} -> [From]
-    notify :: ets:tab()  %% name() -> [pid()]
+    status, 
+    exps,   
+    exps_r, 
+    waits,  
+    waits_r,    
+    notify 
 }).
 
 init(_) ->
